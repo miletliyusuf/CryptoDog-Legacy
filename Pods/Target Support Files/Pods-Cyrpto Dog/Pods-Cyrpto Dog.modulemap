@@ -1,0 +1,6 @@
+framework module Pods_Cyrpto_Dog {
+  umbrella header "Pods-Cyrpto Dog-umbrella.h"
+
+  export *
+  module * { export * }
+}
