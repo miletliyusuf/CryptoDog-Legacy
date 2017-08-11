@@ -15,8 +15,7 @@ let APP_SRV = "https://api.coinmarketcap.com/v1/"
 
 let baseHeader: [String:String] = [
     "Content-Type": "application/json",
-    "Accept": "application/json",
-    "lang": "EN"
+    "Accept": "application/json"
 ]
 
 class BaseRequest: Mappable {
@@ -45,10 +44,21 @@ class BaseRequest: Mappable {
         return toJSON()
     }
     
+    func isArrayData() -> Bool {
+        return false
+    }
+    
     func newInstance(_ jsonString: String) -> AnyObject? {
         let obj = Mapper<BaseRequest>().map(JSONString: jsonString)
         return obj
     }
+    
+    func newArrayInstance(_ jsonString: String) -> Array<Any>? {
+        let obj = Mapper<BaseRequest>().mapArray(JSONString: jsonString)
+        return obj
+    }
+    
+    func isResponseCustomArray() -> Bool { return false }
     
     func startRequest() -> Observable<AnyObject?> {
         
@@ -70,9 +80,15 @@ class BaseRequest: Mappable {
                     case .success:
                         let utf8Text: String = String(data: response.data!, encoding: .utf8)!
                         let responseClass:BaseResponse.Type = self.responseModel()
-                        let obj = responseClass.newInstance(utf8Text)
+                        if self.isResponseCustomArray() == true {
+                            let obj = responseClass.newArrayInstance(utf8Text)
+                            observer.onNext(obj as AnyObject)
+                        }
+                        else {
+                            let obj = responseClass.newInstance(utf8Text)
+                            observer.onNext(obj)
+                        }
                         
-                        observer.onNext(obj)
                         observer.onCompleted()
                     case .failure:
                         observer.onNext(nil)

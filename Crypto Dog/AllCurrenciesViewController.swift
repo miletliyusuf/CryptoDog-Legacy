@@ -15,14 +15,24 @@ class AllCurrenciesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.allCurrencies()
     }
     
     //MARK: - Requests
     
     func allCurrencies() {
         let r = TickerRequest()
-        _ = TickerDataService.list(requestModel: r).subscribe({ (response) in
-            print(response)
+        r.limit = 10
+        _ = TickerDataService.list(requestModel: r).subscribe(onNext: { (response) in
+            if let res:TickerResponse = response as! TickerResponse? {
+                print(response)
+            }
+        }, onError: { (error) in
+            print(error)
+        }, onCompleted: {
+            
+        }, onDisposed: {
+            
         })
     }
     

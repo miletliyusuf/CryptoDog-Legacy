@@ -17,7 +17,10 @@ class TickerRequest: BaseRequest {
 //    "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
     var convert:String?
     
+    override func isResponseCustomArray() -> Bool { return true }
+    
     override func reqEndPointAndType() -> (String, HTTPMethod) {
+        
         if (limit != nil) && (convert != nil) { return ("ticker/?limit=\(limit!)&convert=\(convert!)",.get) }
         else if (limit != nil) { return ("ticker/?limit=\(limit!)",.get) }
         else if (convert != nil) { return ("ticker/?convert=\(convert!)",.get) }
@@ -31,6 +34,6 @@ class TickerRequest: BaseRequest {
     override func responseModel() -> BaseResponse.Type {
         return TickerResponse.self
     }
-
+    
     
 }

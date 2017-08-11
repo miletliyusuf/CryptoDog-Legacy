@@ -21,7 +21,6 @@
 		88DDE6E31F3B31840013A936 /* AllCurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DDE6E21F3B31840013A936 /* AllCurrenciesViewController.swift */; };
 		88DDE6E51F3B32740013A936 /* TickerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DDE6E41F3B32740013A936 /* TickerRequest.swift */; };
 		88DDE6E81F3B34DF0013A936 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DDE6E71F3B34DF0013A936 /* CurrencyModel.swift */; };
-		AC7722E1DA4BEBF13ADBEAA0 /* Pods_Cyrpto_Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB56FFE6137CEDBE4986395 /* Pods_Cyrpto_Dog.framework */; };
 		C4210D340C0ADDF2B61BB114 /* Pods_Crypto_Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F5243719C883FB73B94781 /* Pods_Crypto_Dog.framework */; };
 		DF2E44A94580360A5E4515E1 /* Pods_Crypto_DogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D633AC2BED94AA9125B3EFAA /* Pods_Crypto_DogTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC7722E1DA4BEBF13ADBEAA0 /* Pods_Cyrpto_Dog.framework in Frameworks */,
 				C4210D340C0ADDF2B61BB114 /* Pods_Crypto_Dog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +291,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Miletli;
 				TargetAttributes = {
 					88B7D5DE1F28790D00816C21 = {
@@ -522,7 +520,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -530,7 +530,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -573,7 +577,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -581,7 +587,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -613,7 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FDQWYD8S6L;
-				INFOPLIST_FILE = "$(SRCROOT)/Cyrpto Dog/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Crypto Dog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ymiletlli.CryptoDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -627,7 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FDQWYD8S6L;
-				INFOPLIST_FILE = "$(SRCROOT)/Cyrpto Dog/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Crypto Dog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ymiletlli.CryptoDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -19,9 +19,12 @@ class BaseResponse: Mappable {
     }
     
     class func newInstance(_ jsonString: String)-> AnyObject? {
-		
 		let obj = Mapper<BaseResponse>().map(JSONString: jsonString)
         return obj
-		
+    }
+    
+    class func newArrayInstance(_ jsonString: String)-> [Any]? {
+        let obj = Mapper<BaseResponse>().mapArray(JSONString: jsonString)
+        return obj
     }
 }
