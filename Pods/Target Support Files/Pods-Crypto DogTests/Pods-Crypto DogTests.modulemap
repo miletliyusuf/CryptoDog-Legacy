@@ -1,0 +1,6 @@
+framework module Pods_Crypto_DogTests {
+  umbrella header "Pods-Crypto DogTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

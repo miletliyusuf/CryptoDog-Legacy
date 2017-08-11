@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Cyrpto_DogVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Cyrpto_DogVersionString[];
+FOUNDATION_EXPORT double Pods_Crypto_DogTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Crypto_DogTestsVersionString[];
 
