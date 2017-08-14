@@ -17,12 +17,14 @@ class TickerResponse: BaseResponse {
     }
     
     override func mapping(map: Map) {
+        super.mapping(map: map)
         currencies <- map["currencies"]
     }
     
-    override class func newArrayInstance(_ jsonString: String)-> [Any] {
-        let obj = Mapper<BaseResponse>().mapArray(JSONString: jsonString)
-        return obj!
+    override class func newInstance(_ jsonString: String) -> AnyObject? {
+        
+        let str = "{\"currencies\":\(jsonString)}"
+        let obj = Mapper<TickerResponse>().map(JSONString: str)
+        return obj
     }
-
 }

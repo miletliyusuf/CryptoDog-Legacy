@@ -13,6 +13,8 @@ class AllCurrenciesViewController: BaseViewController {
     @IBOutlet weak var tableView:UITableView?
     @IBOutlet weak var buttonRefresh:UIBarButtonItem?
     
+    var currencies:[CurrencyModel]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.allCurrencies()
@@ -24,9 +26,12 @@ class AllCurrenciesViewController: BaseViewController {
         let r = TickerRequest()
         r.limit = 10
         _ = TickerDataService.list(requestModel: r).subscribe(onNext: { (response) in
-            if let res:TickerResponse = response as! TickerResponse? {
-                print(response)
+            
+            if let res = response as? TickerResponse! {
+                print(res)
+                self.currencies = res.currencies
             }
+            
         }, onError: { (error) in
             print(error)
         }, onCompleted: {

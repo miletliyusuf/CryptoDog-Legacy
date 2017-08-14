@@ -80,14 +80,10 @@ class BaseRequest: Mappable {
                     case .success:
                         let utf8Text: String = String(data: response.data!, encoding: .utf8)!
                         let responseClass:BaseResponse.Type = self.responseModel()
-                        if self.isResponseCustomArray() == true {
-                            let obj = responseClass.newArrayInstance(utf8Text)
-                            observer.onNext(obj as AnyObject)
-                        }
-                        else {
+                       
                             let obj = responseClass.newInstance(utf8Text)
                             observer.onNext(obj)
-                        }
+                        
                         
                         observer.onCompleted()
                     case .failure:
