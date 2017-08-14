@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1E84EB1FBC274C09ED964C9D /* Pods_RandomMessagingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2827280ACC062E7536C8 /* Pods_RandomMessagingAppTests.framework */; };
 		7367A01DBA71CB20B6B679C8 /* Pods_Cyrpto_DogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A873E16ACD0D28E4E08D2526 /* Pods_Cyrpto_DogTests.framework */; };
+		8801EAA11F41BF30008026F4 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EA9F1F41BF30008026F4 /* CoinTableViewCell.swift */; };
+		8801EAA21F41BF30008026F4 /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8801EAA01F41BF30008026F4 /* CoinTableViewCell.xib */; };
+		8801EAA71F41C629008026F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAA61F41C565008026F4 /* Extensions.swift */; };
+		8801EAA81F41C62D008026F4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAA41F41C565008026F4 /* LoadingView.swift */; };
+		8801EAA91F41C631008026F4 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAA51F41C565008026F4 /* UserDefaultsHelper.swift */; };
 		880C49921F2931BE00162ECC /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49911F2931BE00162ECC /* TickerResponse.swift */; };
 		88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5E21F28790D00816C21 /* AppDelegate.swift */; };
 		88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E61F28790D00816C21 /* Main.storyboard */; };
@@ -43,6 +48,11 @@
 		50C2938EF43C57EC1726914C /* Pods-RandomMessagingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomMessagingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomMessagingApp/Pods-RandomMessagingApp.release.xcconfig"; sourceTree = "<group>"; };
 		5670F1EC0202045241AD536E /* Pods-Cyrpto DogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cyrpto DogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cyrpto DogTests/Pods-Cyrpto DogTests.release.xcconfig"; sourceTree = "<group>"; };
 		5EB56FFE6137CEDBE4986395 /* Pods_Cyrpto_Dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cyrpto_Dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8801EA9F1F41BF30008026F4 /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
+		8801EAA01F41BF30008026F4 /* CoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTableViewCell.xib; sourceTree = "<group>"; };
+		8801EAA41F41C565008026F4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		8801EAA51F41C565008026F4 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		8801EAA61F41C565008026F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		880C49911F2931BE00162ECC /* TickerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerResponse.swift; sourceTree = "<group>"; };
 		88B7D5DF1F28790D00816C21 /* Crypto Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7D5E21F28790D00816C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +124,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8801EA9E1F41BEF2008026F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8801EA9F1F41BF30008026F4 /* CoinTableViewCell.swift */,
+				8801EAA01F41BF30008026F4 /* CoinTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8801EAA31F41C54F008026F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8801EAA61F41C565008026F4 /* Extensions.swift */,
+				8801EAA41F41C565008026F4 /* LoadingView.swift */,
+				8801EAA51F41C565008026F4 /* UserDefaultsHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		88B7D5D61F28790D00816C21 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +166,8 @@
 		88B7D5E11F28790D00816C21 /* Crypto Dog */ = {
 			isa = PBXGroup;
 			children = (
+				8801EAA31F41C54F008026F4 /* Helpers */,
+				8801EA9E1F41BEF2008026F4 /* Views */,
 				88CC60AA1F28928100045B45 /* Network */,
 				88B7D6041F287BAA00816C21 /* ViewControllers */,
 				88B7D5E21F28790D00816C21 /* AppDelegate.swift */,
@@ -333,6 +364,7 @@
 			files = (
 				88B7D5ED1F28790D00816C21 /* LaunchScreen.storyboard in Resources */,
 				88B7D5EA1F28790D00816C21 /* Assets.xcassets in Resources */,
+				8801EAA21F41BF30008026F4 /* CoinTableViewCell.xib in Resources */,
 				88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,13 +494,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				88DDE6E51F3B32740013A936 /* TickerRequest.swift in Sources */,
+				8801EAA91F41C631008026F4 /* UserDefaultsHelper.swift in Sources */,
 				88CC60BD1F28C67300045B45 /* BaseResponse.swift in Sources */,
 				88DDE6E81F3B34DF0013A936 /* CurrencyModel.swift in Sources */,
 				88DDE6E31F3B31840013A936 /* AllCurrenciesViewController.swift in Sources */,
+				8801EAA11F41BF30008026F4 /* CoinTableViewCell.swift in Sources */,
+				8801EAA81F41C62D008026F4 /* LoadingView.swift in Sources */,
 				880C49921F2931BE00162ECC /* TickerResponse.swift in Sources */,
 				88CC60AF1F2892CA00045B45 /* BaseRequest.swift in Sources */,
 				88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */,
 				88B7D6031F287BA000816C21 /* BaseViewController.swift in Sources */,
+				8801EAA71F41C629008026F4 /* Extensions.swift in Sources */,
 				88CC60BF1F28C91300045B45 /* TickerDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

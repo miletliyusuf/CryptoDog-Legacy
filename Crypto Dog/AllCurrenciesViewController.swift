@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AllCurrenciesViewController: BaseViewController {
+    
+    fileprivate let coinCellIdentifier = "CoinTableViewCell"
     
     @IBOutlet weak var tableView:UITableView?
     @IBOutlet weak var buttonRefresh:UIBarButtonItem?
     
-    var currencies:[CurrencyModel]?
+    var currencies:[CurrencyModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.allCurrencies()
+        self.initTableView()
     }
     
     //MARK: - Requests
@@ -29,7 +33,8 @@ class AllCurrenciesViewController: BaseViewController {
             
             if let res = response as? TickerResponse! {
                 print(res)
-                self.currencies = res.currencies
+                self.currencies = res.currencies!
+                self.tableView?.reloadData()
             }
             
         }, onError: { (error) in
@@ -45,7 +50,7 @@ class AllCurrenciesViewController: BaseViewController {
     func initTableView() {
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
-        
+        self.tableView?.registerXib(name:coinCellIdentifier)
     }
     
 }
@@ -57,12 +62,16 @@ extension AllCurrenciesViewController:UITableViewDelegate,UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.currencies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "")
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: coinCellIdentifier, for: indexPath) as! CoinTableViewCell
+        let instantCoin = self.currencies[indexPath.row]
+        cell.labelSymbol?.text = instantCoin.symbol!
+        cell.labelPercantage?.text = instantCoin.percent_change_24h!.toPercantageShow()
+        cell.imageViewCoin?.kf.setImage(with: instantCoin.id?.toImageUrl())
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
