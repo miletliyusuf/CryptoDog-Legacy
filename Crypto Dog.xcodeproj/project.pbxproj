@@ -14,6 +14,8 @@
 		8801EAA71F41C629008026F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAA61F41C565008026F4 /* Extensions.swift */; };
 		8801EAA81F41C62D008026F4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAA41F41C565008026F4 /* LoadingView.swift */; };
 		8801EAA91F41C631008026F4 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAA51F41C565008026F4 /* UserDefaultsHelper.swift */; };
+		8801EAAB1F41DB7F008026F4 /* PercantageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAAA1F41DB7F008026F4 /* PercantageView.swift */; };
+		8801EAAD1F41DBA5008026F4 /* PercantageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8801EAAC1F41DBA5008026F4 /* PercantageView.xib */; };
 		880C49921F2931BE00162ECC /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49911F2931BE00162ECC /* TickerResponse.swift */; };
 		88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5E21F28790D00816C21 /* AppDelegate.swift */; };
 		88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E61F28790D00816C21 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		8801EAA41F41C565008026F4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8801EAA51F41C565008026F4 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		8801EAA61F41C565008026F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8801EAAA1F41DB7F008026F4 /* PercantageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercantageView.swift; sourceTree = "<group>"; };
+		8801EAAC1F41DBA5008026F4 /* PercantageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PercantageView.xib; sourceTree = "<group>"; };
 		880C49911F2931BE00162ECC /* TickerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerResponse.swift; sourceTree = "<group>"; };
 		88B7D5DF1F28790D00816C21 /* Crypto Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7D5E21F28790D00816C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 			children = (
 				8801EA9F1F41BF30008026F4 /* CoinTableViewCell.swift */,
 				8801EAA01F41BF30008026F4 /* CoinTableViewCell.xib */,
+				8801EAAA1F41DB7F008026F4 /* PercantageView.swift */,
+				8801EAAC1F41DBA5008026F4 /* PercantageView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8801EAAD1F41DBA5008026F4 /* PercantageView.xib in Resources */,
 				88B7D5ED1F28790D00816C21 /* LaunchScreen.storyboard in Resources */,
 				88B7D5EA1F28790D00816C21 /* Assets.xcassets in Resources */,
 				8801EAA21F41BF30008026F4 /* CoinTableViewCell.xib in Resources */,
@@ -493,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8801EAAB1F41DB7F008026F4 /* PercantageView.swift in Sources */,
 				88DDE6E51F3B32740013A936 /* TickerRequest.swift in Sources */,
 				8801EAA91F41C631008026F4 /* UserDefaultsHelper.swift in Sources */,
 				88CC60BD1F28C67300045B45 /* BaseResponse.swift in Sources */,

@@ -71,6 +71,9 @@ extension AllCurrenciesViewController:UITableViewDelegate,UITableViewDataSource 
         cell.labelSymbol?.text = instantCoin.symbol!
         cell.labelPercantage?.text = instantCoin.percent_change_24h!.toPercantageShow()
         cell.imageViewCoin?.kf.setImage(with: instantCoin.id?.toImageUrl())
+        let hourPercantage:Double = Double(instantCoin.percent_change_24h!)!
+        cell.viewPercantage?.isIncreasing = hourPercantage > 0.0
+        cell.viewPercantage?.percantage = instantCoin.percent_change_24h!
         return cell
     }
     
