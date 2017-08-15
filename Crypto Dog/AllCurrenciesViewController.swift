@@ -28,7 +28,7 @@ class AllCurrenciesViewController: BaseViewController {
     
     func allCurrencies() {
         let r = TickerRequest()
-        r.limit = 10
+//        r.limit = 10
         _ = TickerDataService.list(requestModel: r).subscribe(onNext: { (response) in
             
             if let res = response as? TickerResponse! {
