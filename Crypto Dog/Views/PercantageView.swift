@@ -16,7 +16,7 @@ class PercantageView: UIView {
     
     public var percantage:String! {
         didSet {
-            self.labelPercantage?.text = "\(self)".toPercantageShow()
+            self.labelPercantage?.text = "\(self.percantage!)".toPercantageShow()
         }
     }
     public var isIncreasing:Bool? {
