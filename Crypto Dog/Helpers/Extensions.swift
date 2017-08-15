@@ -32,6 +32,10 @@ extension Double {
         let localDate = dateFormatter.string(from: date)
         return localDate
     }
+    
+    func isIncreasing() -> Bool {
+        return self > 0.0
+    }
 }
 
 extension String {
@@ -47,4 +51,11 @@ extension String {
         return self + " " + "%"
     }
     
+    func usdShow() -> String {
+        return "$" + " " + self
+    }
+    
+    var doubleValue:Double {
+        return Double(self)!
+    }
 }

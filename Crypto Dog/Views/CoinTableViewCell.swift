@@ -12,7 +12,7 @@ class CoinTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageViewCoin:UIImageView?
     @IBOutlet weak var labelSymbol:UILabel?
-    @IBOutlet weak var labelPercantage:UILabel?
+    @IBOutlet weak var labelValue:UILabel?
     @IBOutlet weak var viewPercantage:PercantageView?
     
     override func awakeFromNib() {

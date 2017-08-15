@@ -8,11 +8,16 @@
 
 import Foundation
 import UIKit
+import ChameleonFramework
 
 class PercantageView: UIView {
     
+    private let arrow_down:UIImage = UIImage(named: "arrow_down")!
+    private let arrow_up:UIImage = UIImage(named: "arrow_up")!
+    
     @IBOutlet weak var contentView:UIView?
     @IBOutlet weak var labelPercantage:UILabel?
+    @IBOutlet weak var imageViewArrow:UIImageView?
     
     public var percantage:String! {
         didSet {
@@ -21,7 +26,8 @@ class PercantageView: UIView {
     }
     public var isIncreasing:Bool? {
         didSet {
-            self.contentView?.backgroundColor = isIncreasing! ? UIColor.green : UIColor.red
+            self.contentView?.backgroundColor = isIncreasing! ? UIColor.flatGreen: UIColor.flatRed
+            self.imageViewArrow?.image = isIncreasing! ? arrow_up : arrow_down
         }
     }
     

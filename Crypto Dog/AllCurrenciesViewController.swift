@@ -69,10 +69,9 @@ extension AllCurrenciesViewController:UITableViewDelegate,UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: coinCellIdentifier, for: indexPath) as! CoinTableViewCell
         let instantCoin = self.currencies[indexPath.row]
         cell.labelSymbol?.text = instantCoin.symbol!
-        cell.labelPercantage?.text = instantCoin.percent_change_24h!.toPercantageShow()
+        cell.labelValue?.text = instantCoin.price_usd!.usdShow()
         cell.imageViewCoin?.kf.setImage(with: instantCoin.id?.toImageUrl())
-        let hourPercantage:Double = Double(instantCoin.percent_change_24h!)!
-        cell.viewPercantage?.isIncreasing = hourPercantage > 0.0
+        cell.viewPercantage?.isIncreasing = instantCoin.percent_change_24h!.doubleValue.isIncreasing()
         cell.viewPercantage?.percantage = instantCoin.percent_change_24h!
         return cell
     }
