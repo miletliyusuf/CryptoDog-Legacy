@@ -22,6 +22,8 @@ class AllCurrenciesViewController: BaseViewController {
         super.viewDidLoad()
         self.allCurrencies()
         self.initTableView()
+        
+        LoadingView.showActivityIndicator()
     }
     
     //MARK: - Requests

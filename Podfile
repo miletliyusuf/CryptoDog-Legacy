@@ -10,6 +10,7 @@ target 'Crypto Dog' do
   pod 'RxSwift'
   pod 'Kingfisher'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'lottie-ios'
 
   target 'Crypto DogTests' do
     inherit! :search_paths

@@ -16,6 +16,8 @@
 		8801EAA91F41C631008026F4 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAA51F41C565008026F4 /* UserDefaultsHelper.swift */; };
 		8801EAAB1F41DB7F008026F4 /* PercantageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801EAAA1F41DB7F008026F4 /* PercantageView.swift */; };
 		8801EAAD1F41DBA5008026F4 /* PercantageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8801EAAC1F41DBA5008026F4 /* PercantageView.xib */; };
+		8801EAB01F4485C3008026F4 /* glow_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 8801EAAF1F4485C3008026F4 /* glow_loading.json */; };
+		8801EAB51F448CB7008026F4 /* material_wave_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 8801EAB41F448CB7008026F4 /* material_wave_loading.json */; };
 		880C49921F2931BE00162ECC /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49911F2931BE00162ECC /* TickerResponse.swift */; };
 		88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5E21F28790D00816C21 /* AppDelegate.swift */; };
 		88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E61F28790D00816C21 /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		8801EAA61F41C565008026F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8801EAAA1F41DB7F008026F4 /* PercantageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercantageView.swift; sourceTree = "<group>"; };
 		8801EAAC1F41DBA5008026F4 /* PercantageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PercantageView.xib; sourceTree = "<group>"; };
+		8801EAAF1F4485C3008026F4 /* glow_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = glow_loading.json; path = ../../../../Downloads/glow_loading.json; sourceTree = "<group>"; };
+		8801EAB41F448CB7008026F4 /* material_wave_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = material_wave_loading.json; path = ../../../../Downloads/material_wave_loading.json; sourceTree = "<group>"; };
 		880C49911F2931BE00162ECC /* TickerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerResponse.swift; sourceTree = "<group>"; };
 		88B7D5DF1F28790D00816C21 /* Crypto Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7D5E21F28790D00816C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +153,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		8801EAAE1F4485B4008026F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8801EAB41F448CB7008026F4 /* material_wave_loading.json */,
+				8801EAAF1F4485C3008026F4 /* glow_loading.json */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		88B7D5D61F28790D00816C21 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +189,7 @@
 				8801EA9E1F41BEF2008026F4 /* Views */,
 				88CC60AA1F28928100045B45 /* Network */,
 				88B7D6041F287BAA00816C21 /* ViewControllers */,
+				8801EAAE1F4485B4008026F4 /* Supporting Files */,
 				88B7D5E21F28790D00816C21 /* AppDelegate.swift */,
 				88B7D5E61F28790D00816C21 /* Main.storyboard */,
 				88B7D5E91F28790D00816C21 /* Assets.xcassets */,
@@ -373,6 +387,8 @@
 				88B7D5EA1F28790D00816C21 /* Assets.xcassets in Resources */,
 				8801EAA21F41BF30008026F4 /* CoinTableViewCell.xib in Resources */,
 				88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */,
+				8801EAB01F4485C3008026F4 /* glow_loading.json in Resources */,
+				8801EAB51F448CB7008026F4 /* material_wave_loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +448,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -441,6 +458,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

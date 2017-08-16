@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 class LoadingView:UIView {
 	
@@ -25,9 +26,10 @@ class LoadingView:UIView {
 		let container: UIView = UIView()
 		container.tag = loadingViewTag
 		let loadingView: UIView = UIView()
-		let customImageView: UIActivityIndicatorView = UIActivityIndicatorView()
-		customImageView.startAnimating()
-		
+        let customImageView = LOTAnimationView(name: "material_wave_loading")
+        customImageView.loopAnimation = true
+        customImageView.play()
+        
 		container.frame = selfWindow.frame
 		container.center = selfWindow.center
 		container.backgroundColor = UIColor.black.withAlphaComponent(0.45)
@@ -38,8 +40,8 @@ class LoadingView:UIView {
 		loadingView.clipsToBounds = true
 		loadingView.layer.cornerRadius = 10
 		
-		customImageView.frame = CGRect.init(x: 0, y: 0, width: 150, height: 150)
-		customImageView.center = CGPoint.init(x: loadingView.frame.size.width / 2, y: loadingView.frame.size.height / 2)
+        customImageView.frame = CGRect.init(x: 0, y: 0, width: 150, height: 150)
+        customImageView.center = CGPoint.init(x: loadingView.frame.size.width / 2, y: loadingView.frame.size.height / 2)
 		
 		loadingView.addSubview(customImageView)
 		container.addSubview(loadingView)
@@ -47,6 +49,7 @@ class LoadingView:UIView {
 		if selfWindow.viewWithTag(loadingViewTag) == nil {
 			selfWindow.addSubview(container)
 		}
+        
 	}
 	
 	/*
